@@ -37,6 +37,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
+          tags: type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }
           images: oogway03/pipex
 
       - name: Build and push Docker image
@@ -46,5 +47,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: user/app:latest
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
