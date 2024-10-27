@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
   res.json({ message: "Hello from Express!" });
 });
 
+app.get("/marco", (req, res) => {
+  res.json({ message: "Mandami altri sticker!" });
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
