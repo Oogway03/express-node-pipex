@@ -7,7 +7,7 @@ app.use(express.json());
 
 // Endpoint API
 app.get("/", (req, res) => {
-  res.json({ message: "Hello from Express!" });
+  res.json({ message: "Hello from master Oogway!" });
 });
 
 app.listen(PORT, () => {
