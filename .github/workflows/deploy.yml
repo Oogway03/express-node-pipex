@@ -46,5 +46,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: oogway03/pipex:latest
           labels: ${{ steps.meta.outputs.labels }}
