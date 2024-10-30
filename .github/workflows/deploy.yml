@@ -24,6 +24,13 @@ jobs:
       attestations: write
       id-token: write
     steps:
+
+      - name: Install dependencies
+        run: npm Install
+
+      - name: Execute tests
+        run: npm test
+        
       - name: Check out the repo
         uses: actions/checkout@v4
 
